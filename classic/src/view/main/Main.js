@@ -89,5 +89,13 @@ Ext.define('MyApp.view.main.Main', {
             xtype: 'form-loadingcargo'
         }]
 
-    }]
+    },
+    {
+        title: 'Random Wheel',
+        iconCls: 'fa-cog',
+        items: [{
+            xtype: 'form-randomwheel'
+        }]
+    }
+]
 });
