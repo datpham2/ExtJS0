@@ -1,28 +1,37 @@
+// Define a new class 'LoadingCargo' in the 'MyApp.view.main.List' namespace
 Ext.define('MyApp.view.main.List.LoadingCargo', {
+    // Extend the Ext.form.Panel class to inherit its properties and methods
     extend: 'Ext.form.Panel',
+    // Define an alias for this component, making it easier to reference
     xtype: 'form-loadingcargo',
+    // Specify the dependencies required by this component
     requires: [
-        'MyApp.store.CategoryStore'
+        'MyApp.store.CategoryStore' // This component requires the CategoryStore
     ],
+    // Define the ViewModel for this component
     viewModel: {
-        type: 'default',
+        type: 'default', // Use the default ViewModel type
         stores: {
             category: {
-                type: 'categorystore'
+                type: 'categorystore' // Define a store named 'category' of type 'categorystore'
             }
         }
     },
+    // Set the frame property to false, meaning no border will be drawn around the panel
     frame: false,
+    // Set the title of the panel
     title: 'Loading Cargo',
+    // Add padding inside the panel
     bodyPadding: 10,
+    // Make the panel scrollable if the content overflows
     scrollable: true,
 
+    // Uncomment the following lines to set default configurations for form fields
     // fieldDefaults: {
-    //     labelAlign: 'right',
-    //     labelWidth: 115,
-    //     msgTarget: 'side'
+    //     labelAlign: 'right', // Align the labels to the right
+    //     labelWidth: 115, // Set the width of the labels
+    //     msgTarget: 'side' // Display validation messages on the side of the field
     // },
-
     initComponent: function () {
         var me = this;
 
